@@ -1,18 +1,10 @@
-import paper, { Path, PaperScope, Color, Point, Size } from 'paper';
-import './style.css';
+// import paper, { Path, PaperScope, Color, Point, Size } from 'paper';
 
 // const paperScope = new paper.PaperScope();
 // console.log('🚀 > paperScope:', paperScope);
-paper.setup('paper-canvas');
-console.log('🚀 > paper:', paper);
+// paper.setup('paper-canvas');
 
-var myPath = new Path();
-myPath.strokeColor = new Color('black');
+import './style.css';
+import editor from './Editor';
 
-// This function is called whenever the user
-// clicks the mouse in the view:
-paper.view.onMouseDown = function (e) {
-  console.log('🚀 > e:', e);
-  // Add a segment to the path at the position of the mouse:
-  myPath.add(e.point);
-};
+editor.init('paper-canvas', { width: 1000, height: 600 });

@@ -10,7 +10,26 @@
 
 <body>
   <div id="app">
-    <canvas resize class="paper-canvas graph-paper" id="paper-canvas"></canvas>
+    <nav id="toolbar" class="toolbar">
+      <button id="regular-selection-tool" class="tool regular-selection-tool"
+        data-tool-id="regular-selection-tool">REGULAR
+        SELECTION</button>
+      <button id="direct-selection-tool" class="tool direct-selection-tool" data-tool-id="direct-selection-tool">DIRECT
+        SELECTION</button>
+      <button id="rectangle-tool" class="tool rectangle-tool" data-tool-id="rectangle-tool">RECTANGLE</button>
+      <!-- <button id="circle-tool" class="tool circle-tool" data-tool-id="circle-tool">CIRCLE</button> -->
+      <button id="path-tool" class="tool path-tool" data-tool-id="path-tool">PATH</button>
+
+      <div class="v-divider"></div>
+
+      <button id="btn-clear" class="btn btn-clear">CLEAR</button>
+
+      <!-- <button class="import-svg">IMPORT SVG</button>
+      <button class="export-svg">EXPORT SVG</button> -->
+    </nav>
+    <div class="canvas-container">
+      <canvas class="paper-canvas graph-paper" id="paper-canvas"></canvas>
+    </div>
   </div>
   <script type="module" src="/src/main.ts"></script>
 </body>
